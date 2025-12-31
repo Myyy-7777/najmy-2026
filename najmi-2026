@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pesan Magis untuk Myy</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0b1d33;
+      overflow-x: hidden;
+      color: #e0e6f0;
+      min-height: 100vh;
+    }
+
+    /* Stars background */
+    .stars {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      z-index: -1;
+    }
+
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: #76c7ff;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: twinkle 2s infinite ease-in-out;
+    }
+
+    @keyframes twinkle {
+      0%, 100% {opacity: 0.3;}
+      50% {opacity: 1;}
+    }
+
+    /* Card pesan */
+    .card {
+      max-width: 700px;
+      background: rgba(10,25,50,0.85);
+      padding: 40px 30px;
+      border-radius: 25px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+      overflow-y: auto;
+      max-height: 80vh;
+      line-height: 1.7;
+      border: 1px solid rgba(118,199,255,0.4);
+      backdrop-filter: blur(10px);
+      margin: 50px auto;
+      position: relative;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #76c7ff;
+      text-shadow: 0 0 8px #76c7ff, 0 0 15px #76c7ff;
+      font-size: 2em;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    /* Scrollbar estetik */
+    .card::-webkit-scrollbar {
+      width: 8px;
+    }
+    .card::-webkit-scrollbar-track {
+      background: rgba(10,25,50,0.3);
+      border-radius: 10px;
+    }
+    .card::-webkit-scrollbar-thumb {
+      background: #76c7ff;
+      border-radius: 10px;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="stars" id="stars"></div>
+
+  <div class="card">
+    <h1>Hai Myy 🙏🏻</h1>
+    <p>Berelaan ganggu waktunya, KD kerasaan 2025 hndk lewat dh lah.. dan 2026 akan segera tiba.</p>
+    <p>Tahun ini menurutku tahun yang agak berat bagiku.</p>
+    <p>Dan untuk 2026, aku berjanji pada diriku sendiri bahwa tahun ini aku benar-benar fokus, bertumbuh, dan berusaha mengarahkan hidupku ke jalan yang benar. :)</p>
+    <p>Dan semoga semua harapan yang kamu impikan segera tercapai di 2026 ya. Teruslah tumbuh, terus maju, dan raih apa yang kamu inginkan. Aku akan menjadi saksi atas segala prosesmu yang akan datang.</p>
+    <p>Dan ketika kamu merasa lelah.. ingat ada seseorang yang selalu percaya padamu dan selalu bangga pada setiap langkahmu, keberhasilan, dan bahkan kegagalan.</p>
+    <p>Terimakasih telah menjadi salah satu part terbaikku di 2025, maaf kesalahan-kesalahanku sebelumnya 🙏🏻</p>
+    <p><strong>2201.</strong></p>
+  </div>
+
+  <script>
+    // Membuat bintang acak
+    const starsContainer = document.getElementById('stars');
+    const numStars = 100;
+
+    for(let i=0; i<numStars; i++){
+      const star = document.createElement('div');
+      star.classList.add('star');
+      star.style.top = Math.random() * 100 + '%';
+      star.style.left = Math.random() * 100 + '%';
+      star.style.width = star.style.height = (Math.random() * 2 + 1) + 'px';
+      star.style.animationDuration = (Math.random() * 3 + 2) + 's';
+      starsContainer.appendChild(star);
+    }
+  </script>
+</body>
+</html>
